@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Полупрозрачный задний фон с размытием -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#33FFFFFF"/> <!-- 20% прозрачности -->
+            <corners android:radius="16dp"/>
+        </shape>
+    </item>
+
+    <!-- Тень (имитация `box-shadow`) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent"/>
+            <corners android:radius="16dp"/>
+        </shape>
+        <padding android:left="3dp" android:top="3dp" android:right="3dp" android:bottom="3dp"/>
+    </item>
+
+    <!-- Основной белый контейнер -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#55FFFFFF"/> <!-- 30% прозрачности -->
+            <corners android:radius="16dp"/>
+        </shape>
+    </item>
+
+</layer-list>

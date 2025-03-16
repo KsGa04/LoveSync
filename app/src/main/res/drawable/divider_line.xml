@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:name="divider_line">
+    <size android:height="1dp"/>
+    <solid android:color="@color/input_border"/>
+</shape>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:elevation="8dp"
+    android:padding="4dp"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <!-- Кнопка "Главная" -->
+    <LinearLayout
+        android:id="@+id/nav_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="4dp"
+        android:background="@drawable/rounded_nav_item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nav_tasks"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_home"
+            app:tint="@color/gray_dark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Главная"
+            android:textSize="10sp"
+            android:textColor="@color/gray_dark"/>
+    </LinearLayout>
+
+    <!-- Кнопка "Задачи" -->
+    <LinearLayout
+        android:id="@+id/nav_tasks"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="4dp"
+        android:background="@drawable/rounded_nav_item"
+        app:layout_constraintStart_toEndOf="@id/nav_home"
+        app:layout_constraintEnd_toStartOf="@+id/nav_shopping"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_tasks"
+            app:tint="@color/gray_dark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Задачи"
+            android:textSize="10sp"
+            android:textColor="@color/gray_dark"/>
+    </LinearLayout>
+
+    <!-- Кнопка "Покупки" -->
+    <LinearLayout
+        android:id="@+id/nav_shopping"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="4dp"
+        android:background="@drawable/rounded_nav_item"
+        app:layout_constraintStart_toEndOf="@id/nav_tasks"
+        app:layout_constraintEnd_toStartOf="@+id/nav_gifts"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_shopping"
+            app:tint="@color/gray_dark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Покупки"
+            android:textSize="10sp"
+            android:textColor="@color/gray_dark"/>
+    </LinearLayout>
+
+    <!-- Кнопка "Подарки" -->
+    <LinearLayout
+        android:id="@+id/nav_gifts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="4dp"
+        android:background="@drawable/rounded_nav_item"
+        app:layout_constraintStart_toEndOf="@id/nav_shopping"
+        app:layout_constraintEnd_toStartOf="@+id/nav_finance"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_gifts"
+            app:tint="@color/gray_dark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Подарки"
+            android:textSize="10sp"
+            android:textColor="@color/gray_dark"/>
+    </LinearLayout>
+
+    <!-- Кнопка "Финансы" -->
+    <LinearLayout
+        android:id="@+id/nav_finance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="4dp"
+        android:background="@drawable/rounded_nav_item"
+        app:layout_constraintStart_toEndOf="@id/nav_gifts"
+        app:layout_constraintEnd_toStartOf="@+id/nav_profile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_wallet"
+            app:tint="@color/gray_dark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Финансы"
+            android:textSize="10sp"
+            android:textColor="@color/gray_dark"/>
+    </LinearLayout>
+
+    <!-- Кнопка "Профиль" -->
+    <LinearLayout
+        android:id="@+id/nav_profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="4dp"
+        android:background="@drawable/rounded_nav_item"
+        app:layout_constraintStart_toEndOf="@id/nav_finance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_user"
+            app:tint="@color/gray_dark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Профиль"
+            android:textSize="10sp"
+            android:textColor="@color/gray_dark"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

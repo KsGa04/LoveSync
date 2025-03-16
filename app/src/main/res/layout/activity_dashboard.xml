@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/soft_background"
+    android:padding="10dp">
+
+
+    <View
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/circle_pattern"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:translationX="10dp"
+        android:translationY="-50dp"/>
+
+    <!-- Верхний блок с профилем -->
+    <LinearLayout
+        android:id="@+id/profileContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/circle_background"
+            android:padding="4dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="12dp">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Привет, Алексей!"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/userStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Вы с Марией"
+                android:textSize="12sp"
+                android:textColor="@color/gray_dark"/>
+        </LinearLayout>
+
+        <!-- Иконка уведомлений -->
+        <ImageView
+            android:id="@+id/notificationButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/rounded_icon_background"
+            android:padding="8dp"
+            android:src="@drawable/ic_bell"
+            app:tint="@color/coral_dark" />
+    </LinearLayout>
+
+    <!-- Блок с поцелуйчиками -->
+    <LinearLayout
+        android:id="@+id/kissesContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/love_gradient"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileContainer"
+        android:layout_marginTop="16dp">
+
+        <!-- Вложенный контейнер для размытия -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_card_blurred"
+            android:padding="12dp"
+            android:orientation="vertical"
+            android:elevation="2dp">
+
+            <!-- Заголовок с иконкой -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_heart_filled"
+                    android:layout_marginEnd="6dp"
+                    app:tint="@color/coral_medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Поцелуйчики"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/coral_medium"
+                    android:layout_weight="1"/>
+
+                <!-- Кнопка "Заработать" -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/earnKissesButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="Заработать"
+                    android:textSize="12sp"
+                    android:background="@drawable/rounded_button"
+                    android:textColor="@android:color/white"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ваша валюта поощрений"
+                android:textSize="12sp"
+                android:textColor="@color/gray_dark"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Количество -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/kissesCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="42"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"/>
+
+                <!-- Кнопка "Обменять" -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/exchangeKissesButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="Обменять"
+                    android:textSize="12sp"
+                    android:background="@drawable/rounded_button_secondary"
+                    android:textColor="@android:color/white"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- Блоки с задачами и покупками -->
+    <LinearLayout
+        android:id="@+id/tasksContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/kissesContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_card_blue"
+            android:padding="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Задачи"
+                android:textSize="12sp"
+                android:textColor="@color/blue_dark"/>
+
+            <TextView
+                android:id="@+id/tasksCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3/8"
+                android:textSize="20sp"
+                android:textColor="@color/blue_dark"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_card_coral"
+            android:padding="12dp"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Покупки"
+                android:textSize="12sp"
+                android:textColor="@color/coral_dark"/>
+
+            <TextView
+                android:id="@+id/shoppingCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5/12"
+                android:textSize="20sp"
+                android:textColor="@color/coral_dark"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Блок с предстоящими мероприятиями -->
+    <LinearLayout
+        android:id="@+id/upcomingEventsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_card_blurred"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:elevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/tasksContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <!-- Заголовок и кнопка "Календарь" -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Ближайшие события"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_weight="1"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/openCalendar"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Календарь"
+                android:textSize="12sp"
+                android:background="@drawable/rounded_button_light"
+                android:textColor="@color/blue_dark"
+                android:drawableStart="@drawable/ic_calendar"
+                android:drawablePadding="4dp"
+                android:paddingHorizontal="8dp"/>
+        </LinearLayout>
+
+        <!-- Список мероприятий -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
+            <!-- Мероприятие: Оплатить аренду -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_card_yellow"
+                android:padding="12dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Оплатить аренду"
+                        android:textSize="12sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Завтра, 20:00"
+                        android:textSize="10sp"
+                        android:textColor="@color/gray_dark"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Финансы"
+                    android:textSize="10sp"
+                    android:textColor="@color/yellow_dark"
+                    android:background="@drawable/rounded_label_yellow"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"/>
+            </LinearLayout>
+
+            <!-- Мероприятие: День рождения Маши -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_card_yellow"
+                android:padding="12dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="День рождения Маши"
+                        android:textSize="12sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15 марта"
+                        android:textSize="10sp"
+                        android:textColor="@color/gray_dark"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Праздник"
+                    android:textSize="10sp"
+                    android:textColor="@color/coral_medium"
+                    android:background="@drawable/rounded_label_coral"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"/>
+            </LinearLayout>
+
+            <!-- Мероприятие: Купить продукты -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_card_yellow"
+                android:padding="12dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Купить продукты"
+                        android:textSize="12sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Сегодня, 18:00"
+                        android:textSize="10sp"
+                        android:textColor="@color/gray_dark"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Покупки"
+                    android:textSize="10sp"
+                    android:textColor="@color/mint_dark"
+                    android:background="@drawable/rounded_label_mint"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!-- Включаем нижнюю навигацию -->
+    <include
+        android:id="@+id/bottomNav"
+        layout="@layout/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

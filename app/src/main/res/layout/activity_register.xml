@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/soft_background"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <!-- Логотип -->
+        <RelativeLayout
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/gradient_circle"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_heart"
+                android:layout_centerInParent="true"
+                app:tint="@color/white" />
+        </RelativeLayout>
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LoveSync"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp" />
+
+        <!-- Подзаголовок -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Приложение для пар"
+            android:textSize="16sp"
+            android:textColor="@color/gray_dark"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Форма -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_card"
+            android:padding="24dp"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Создание аккаунта"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Введите данные для регистрации"
+                android:textSize="14sp"
+                android:textColor="@color/gray"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Поле Имя -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Имя"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/nameInput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Иван Иванов"
+                android:inputType="textPersonName"
+                android:padding="12dp"
+                android:background="@drawable/rounded_input"
+                android:textSize="16sp" />
+
+            <!-- Поле Email -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/emailInput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="example@mail.com"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:background="@drawable/rounded_input"
+                android:textSize="16sp" />
+
+            <!-- Поле Пароля -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Пароль"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/passwordInput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Пароль"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:background="@drawable/rounded_input"
+                android:textSize="16sp" />
+
+            <!-- Подтверждение пароля -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Подтверждение пароля"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/confirmPasswordInput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Подтверждение пароля"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:background="@drawable/rounded_input"
+                android:textSize="16sp" />
+
+            <!-- Кнопка Зарегистрироваться -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/registerButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Зарегистрироваться"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:background="@drawable/rounded_button"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="16dp" />
+
+            <!-- Ссылка на авторизацию -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="12dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_arrow_left"
+                    app:tint="@color/gray" />
+
+                <TextView
+                    android:id="@+id/loginRedirect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Уже есть аккаунт? Войти"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

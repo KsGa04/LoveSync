@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/soft_background"
+    tools:context=".OnboardingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <!-- Логотип -->
+        <RelativeLayout
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/gradient_circle"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_heart"
+                android:layout_centerInParent="true"
+                app:tint="@android:color/white" />
+        </RelativeLayout>
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Добро пожаловать в LoveSync"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp" />
+
+        <!-- Подзаголовок -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Давайте настроим ваш профиль"
+            android:textSize="16sp"
+            android:textColor="@color/gray_dark"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Карточка с выбором режима -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_card"
+            android:padding="24dp"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Как вы хотите использовать LoveSync?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Выберите режим использования приложения"
+                android:textSize="14sp"
+                android:textColor="@color/gray"
+                android:layout_marginBottom="12dp" />
+
+            <RadioGroup
+                android:id="@+id/modeGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Режим пары -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:background="@drawable/rounded_radio"
+                    android:gravity="center_vertical">
+
+                    <RadioButton
+                        android:id="@+id/modeCouple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="С партнером"
+                        android:textSize="16sp"
+                        android:checked="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Использовать приложение вместе с партнером"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- Одиночный режим -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:background="@drawable/rounded_radio"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="8dp">
+
+                    <RadioButton
+                        android:id="@+id/modeSingle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Индивидуально"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Использовать приложение самостоятельно"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+            </RadioGroup>
+
+            <!-- Кнопка Продолжить -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/continueButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Продолжить"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_button"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
