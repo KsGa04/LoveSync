@@ -12,7 +12,7 @@
         android:strokeColor="@color/black"
         android:strokeLineCap="round"
         android:strokeLineJoin="round"
-        android:fillColor="none"/>
+        android:fillColor="#00000000"/>
 
     <!-- Основной корпус кошелька -->
     <path
@@ -21,6 +21,6 @@
         android:strokeColor="@color/black"
         android:strokeLineCap="round"
         android:strokeLineJoin="round"
-        android:fillColor="none"/>
+        android:fillColor="#00000000"/>
 
 </vector>

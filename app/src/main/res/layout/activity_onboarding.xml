@@ -148,5 +148,38 @@
                 android:textColor="@android:color/white"
                 android:layout_marginTop="16dp"/>
         </LinearLayout>
+        <!-- Блок с кодом приглашения (скрывается, если выбран одиночный режим) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:background="@drawable/rounded_card"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            android:id="@+id/inviteCodeContainer">
+
+            <TextView
+                android:id="@+id/inviteCodeText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Код приглашения: LOVESYNC123"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/copyCodeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Копировать"
+                android:padding="8dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/rounded_button"/>
+        </LinearLayout>
+
     </LinearLayout>
 </ScrollView>

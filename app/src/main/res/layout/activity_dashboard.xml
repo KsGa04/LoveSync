@@ -414,7 +414,7 @@
     <!-- Включаем нижнюю навигацию -->
     <include
         android:id="@+id/bottomNav"
-        layout="@layout/bottom_navigation"
+        layout="@layout/activity_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"/>

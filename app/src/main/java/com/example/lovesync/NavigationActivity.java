@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class DashboardActivity extends AppCompatActivity {
+public class NavigationActivity extends AppCompatActivity {
 
     private LinearLayout navHome, navTasks, navShopping, navGifts, navFinance, navProfile;
 
@@ -28,12 +28,12 @@ public class DashboardActivity extends AppCompatActivity {
         setActiveTab(navHome);
 
         // Устанавливаем обработчики кликов для навигации
-        navHome.setOnClickListener(v -> switchActivity(DashboardActivity.this, DashboardActivity.class, navHome));
-        navTasks.setOnClickListener(v -> switchActivity(DashboardActivity.this, TasksActivity.class, navTasks));
-        navShopping.setOnClickListener(v -> switchActivity(DashboardActivity.this, ShoppingActivity.class, navShopping));
-        navGifts.setOnClickListener(v -> switchActivity(DashboardActivity.this, GiftsActivity.class, navGifts));
-        navFinance.setOnClickListener(v -> switchActivity(DashboardActivity.this, FinanceActivity.class, navFinance));
-        navProfile.setOnClickListener(v -> switchActivity(DashboardActivity.this, ProfileActivity.class, navProfile));
+        navHome.setOnClickListener(v -> switchActivity(NavigationActivity.this, DashboardActivity.class, navHome));
+        navTasks.setOnClickListener(v -> switchActivity(NavigationActivity.this, TasksActivity.class, navTasks));
+        navShopping.setOnClickListener(v -> switchActivity(NavigationActivity.this, ShoppingActivity.class, navShopping));
+        navGifts.setOnClickListener(v -> switchActivity(NavigationActivity.this, GiftsActivity.class, navGifts));
+        navFinance.setOnClickListener(v -> switchActivity(NavigationActivity.this, FinanceActivity.class, navFinance));
+        navProfile.setOnClickListener(v -> switchActivity(NavigationActivity.this, ProfileActivity.class, navProfile));
     }
 
     // Метод для переключения активности и обновления активного элемента
